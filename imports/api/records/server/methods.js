@@ -276,8 +276,10 @@ Meteor.methods({
                 }
                 averageBlockTime = averageBlockTime / analytics.length;
                 averageVotingPower = averageVotingPower / analytics.length;
-
+                console.log('====')
+                console.log({averageBlockTime,averageVotingPower})
                 Chain.update({chainId:Meteor.settings.public.chainId},{$set:{lastMinuteVotingPower:averageVotingPower, lastMinuteBlockTime:averageBlockTime}});
+                console.log('====')
                 AverageData.insert({
                     averageBlockTime: averageBlockTime,
                     averageVotingPower: averageVotingPower,
