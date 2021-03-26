@@ -1,56 +1,53 @@
 {
     "public":{
-        "chainName": "Cosmos",
-        "chainId": "{Chain ID}",
-        "gtm": "{Add your Google Tag Manager ID here}",
+	  "networks": "https://thecelo.com/cosmos_networks.json",
+        "chainName": "Crypto.org chain",
+        "chainId": "crypto-org-chain-mainnet-1",
+        "gtm": "GTM-K6K9ZN8",
         "slashingWindow": 10000,
         "uptimeWindow": 250,
         "initialPageSize": 30,
         "secp256k1": false,
-        "bech32PrefixAccAddr": "cosmos",
-        "bech32PrefixAccPub": "cosmospub",
-        "bech32PrefixValAddr": "cosmosvaloper",
-        "bech32PrefixValPub": "cosmosvaloperpub",
-        "bech32PrefixConsAddr": "cosmosvalcons",
-        "bech32PrefixConsPub": "cosmosvalconspub",
-        "bondDenom": "uatom",
+        "bech32PrefixAccAddr": "cro",
+        "bech32PrefixAccPub": "cropub",
+        "bech32PrefixValAddr": "crocncl",
+        "bech32PrefixValPub": "crocnclpub",
+        "bech32PrefixConsAddr": "crocnclcons",
+        "bech32PrefixConsPub": "crocnclconspub",
+        "bondDenom": "basecro",
         "powerReduction": 1000000,
         "coins": [
             {
-                "denom": "uatom",
-                "displayName": "ATOM",
-                "fraction": 1000000
-            }, 
-            {
-                "denom": "umuon",
-                "displayName": "MUON",
-                "fraction": 1000000
-            } 
+                "denom": "basecro",
+                "displayName": "CRO",
+                "fraction": 100000000
+            }
         ],
         "ledger":{
             "coinType": 118,
-            "appName": "Cosmos",
+            "appName": "Crypto.org chain",
             "appVersion": "2.16.0",
             "gasPrice": 0.02
         },
         "modules": {
             "bank": true,
             "supply": true,
-            "minting": false,
+            "minting": true,
             "gov": true,
-            "distribution": false
+            "distribution": true,
+	    "staking": true
         },
-        "coingeckoId": "cosmos"
+        "coingeckoId": "crypto-com-chain"
     },
     "remote":{
-        "rpc":"https://rpc.stargate.forbole.com:443",
-        "api":"https://api.stargate.forbole.com:443"
+        "rpc":"http://192.168.62.202:23657",
+        "api":"http://192.168.62.202:1316"
     },
     "debug": {
         "startTimer": true
     },
     "params":{
-        "startHeight": 0,
+        "startHeight": 3,
         "defaultBlockTime": 5000,
         "validatorUpdateWindow": 300,
         "blockInterval": 15000,
@@ -64,5 +61,3 @@
         "delegationInterval": 900000
     }
 }
-
-

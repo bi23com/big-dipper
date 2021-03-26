@@ -24,7 +24,7 @@ common:
     retry: 'Повторить попытку'
     rewards: 'награды'
 navbar:
-    siteName: 'BIG DIPPER'
+    siteName: 'Home'
     validators: 'валидаторы'
     blocks: 'блоки'
     transactions: 'транзакции'
@@ -225,4 +225,3 @@ messageTypes:
     unjail: 'Un-Джейл'
     IBCTransfer: 'IBC Трансферт'
     IBCReceive: 'IBC Получение'
-

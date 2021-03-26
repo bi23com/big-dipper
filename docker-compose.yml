@@ -6,7 +6,7 @@ services:
       context: .
       dockerfile: Dockerfile
     ports:
-      - '3080:3000'
+      - '3081:3000'
     depends_on:
       - mongo
     environment:
@@ -20,7 +20,7 @@ services:
     command:
       - --storageEngine=wiredTiger
     volumes:
-      - data:/data/db
+      - /okchaindata/crypto.bi23.com:/data/db
 
-volumes:
-  data:
+        #volumes:
+        # data:
