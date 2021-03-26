@@ -269,7 +269,9 @@ Meteor.methods({
             let analytics = Analytics.find({ "time": { $gt: new Date(Date.now() - 60 * 1000) } }).fetch();
             if (analytics.length > 0){
                 for (i in analytics){
-                    averageBlockTime += analytics[i].timeDiff;
+                    if(analytics[i].timeDiff){
+                      averageBlockTime += analytics[i].timeDiff;
+                    }
                     averageVotingPower += analytics[i].voting_power;
                 }
                 averageBlockTime = averageBlockTime / analytics.length;
@@ -290,7 +292,9 @@ Meteor.methods({
             let analytics = Analytics.find({ "time": { $gt: new Date(Date.now() - 60*60 * 1000) } }).fetch();
             if (analytics.length > 0){
                 for (i in analytics){
-                    averageBlockTime += analytics[i].timeDiff;
+                    if(analytics[i].timeDiff){
+                      averageBlockTime += analytics[i].timeDiff;
+                    }
                     averageVotingPower += analytics[i].voting_power;
                 }
                 averageBlockTime = averageBlockTime / analytics.length;
@@ -312,7 +316,9 @@ Meteor.methods({
             let analytics = Analytics.find({ "time": { $gt: new Date(Date.now() - 24*60*60 * 1000) } }).fetch();
             if (analytics.length > 0){
                 for (i in analytics){
-                    averageBlockTime += analytics[i].timeDiff;
+                    if(analytics[i].timeDiff){
+                      averageBlockTime += analytics[i].timeDiff;
+                    }
                     averageVotingPower += analytics[i].voting_power;
                 }
                 averageBlockTime = averageBlockTime / analytics.length;
